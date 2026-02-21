@@ -1,11 +1,16 @@
+disableKinds = ["RSS"]
 baseURL = "https://www.3dminc.com/"
 
 languageCode = "ko-kr"
 title = "쓰리디엠 주식회사 | 3DM Inc."
 theme = "PaperMod"
 
+[author]
+  name = "3DM Inc."
+
 [params]
   description = "3DM Inc. 공식 홈페이지 및 공시/IR 게시"
+  author = "3DM Inc."
   defaultTheme = "auto"
   ShowReadingTime = false
   ShowShareButtons = false
@@ -32,3 +37,4 @@ theme = "PaperMod"
     name = "Contact"
     url = "/contact/"
     weight = 50
+    
