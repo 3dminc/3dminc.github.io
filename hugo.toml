@@ -1,4 +1,3 @@
-disableKinds = ["RSS"]
 baseURL = "https://www.3dminc.com/"
 
 languageCode = "ko-kr"
