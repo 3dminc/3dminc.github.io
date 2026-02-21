@@ -1,8 +1,9 @@
-name: Deploy Hugo site to Pages
+﻿name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -29,11 +30,11 @@ jobs:
           hugo-version: latest
           extended: true
 
-      - name: Show Hugo config (debug)
-        run: hugo config | sed -n '1,120p'
-
       - name: Build
         run: hugo --minify --baseURL "https://www.3dminc.com/" --environment production
+
+      - name: Ensure index exists
+        run: test -f public/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
