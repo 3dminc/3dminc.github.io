@@ -49,3 +49,7 @@ jobs:
     steps:
       - name: Deploy
         uses: actions/deploy-pages@v4
+              - name: Debug public dir
+        run: |
+          ls -la public
+          test -f public/index.html
