@@ -1,0 +1,5 @@
+params:
+  label:
+    icon: "img/3dm-logo.svg"
+    iconHeight: 36
+    text: ""

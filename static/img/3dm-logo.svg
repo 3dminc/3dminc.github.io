@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" role="img" aria-label="3DM Inc. logo">
+  <defs>
+    <style>
+      .gold{stroke:#C6A84E}
+      .stroke{fill:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
+      .wm{font-family:Inter,Pretendard,"Apple SD Gothic Neo","Noto Sans KR",system-ui,-apple-system,sans-serif}
+    </style>
+  </defs>
+  <g transform="translate(70,40)">
+    <path class="stroke gold" d="M 60 30 L 140 0 L 220 30 L 140 60 Z"/>
+    <path class="stroke gold" d="M 60 30 L 60 130"/>
+    <path class="stroke gold" d="M 220 30 L 220 130"/>
+    <path class="stroke gold" d="M 60 130 L 140 160"/>
+    <path class="stroke gold" d="M 220 130 L 140 160"/>
+    <path class="stroke" style="stroke:currentColor;stroke-width:6;opacity:.9" d="M 140 60 L 140 160"/>
+  </g>
+  <g transform="translate(340,70)">
+    <text class="wm" x="0" y="78" font-size="96" font-weight="800" letter-spacing="-2" fill="currentColor">3DM</text>
+    <text class="wm" x="6" y="118" font-size="24" font-weight="700" letter-spacing="4" fill="#C6A84E" opacity="0.9">INC.</text>
+    <path d="M 6 132 L 150 132" style="stroke:#C6A84E;stroke-width:6;stroke-linecap:round;opacity:.9"/>
+  </g>
+</svg>
