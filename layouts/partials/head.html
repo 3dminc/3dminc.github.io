@@ -1,0 +1,52 @@
+﻿<head>
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/schema.html" . }}
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{{ if .IsHome }}3DM Inc. | Dental Direct Digital Manufacture{{ else }}{{ .Title }} | 3DM Inc.{{ end }}</title>
+
+  <meta name="description" content="{{ if .IsHome }}3DM Inc. is a Dental Direct Digital Manufacture company specializing in dental 3D printing, CAD-CAM systems, and biocompatible materials engineering.{{ else }}{{ with .Params.lead }}{{ . | plainify }}{{ end }}{{ end }}" />
+
+  <meta name="keywords" content="Dental Direct Digital Manufacture, Dental 3D Printing, CAD-CAM, Digital Dentistry, Biocompatible Materials, 3DM Inc." />
+
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="3DM Inc." />
+  <meta property="og:title" content="{{ if .IsHome }}3DM Inc. | Dental Direct Digital Manufacture{{ else }}{{ .Title }} | 3DM Inc.{{ end }}" />
+  <meta property="og:description" content="Digital Dentistry powered by Dental Direct Digital Manufacture." />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:image" content="https://www.3dminc.com/images/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="3DM Inc. | Dental Direct Digital Manufacture" />
+  <meta name="twitter:description" content="Integrated workflow for digital dentistry manufacturing." />
+  <meta name="twitter:image" content="https://www.3dminc.com/images/og-image.jpg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "3DM Inc.",
+    "url": "https://www.3dminc.com",
+    "logo": "https://www.3dminc.com/images/logo.png",
+    "email": "admin@3dminc.com",
+    "foundingDate": "2022",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "22 Nakdongbuk-ro",
+      "addressLocality": "Busan",
+      "addressCountry": "KR"
+    },
+    "description": "Dental Direct Digital Manufacture company specializing in digital dentistry manufacturing."
+  }
+  </script>
+
+</head>
+
