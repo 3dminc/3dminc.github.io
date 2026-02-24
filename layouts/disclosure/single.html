@@ -1,0 +1,41 @@
+﻿{{ define "main" }}
+<main>
+  <section class="section section-hero">
+    <div class="section-wrap">
+      <p class="section-kicker">IR & Disclosure</p>
+      <h1 class="section-title">{{ .Title }}</h1>
+      <p class="section-lead">
+        {{ .Date.Format "2006-01-02" }}
+        {{ with .Params.category }} · {{ . }}{{ end }}
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-wrap section-body" style="max-width:900px;">
+      {{ with .Params.summary }}
+        <p style="border-left:3px solid rgba(127,127,127,.35); padding-left:1rem; opacity:.9; line-height:1.75;">{{ . }}</p>
+      {{ end }}
+
+      <article style="line-height:1.85;">
+        {{ .Content }}
+      </article>
+
+      {{ with .Params.attachments }}
+        <hr style="margin:2rem 0; opacity:.35;">
+        <h3>Attachments</h3>
+        <ul>
+          {{ range . }}
+            <li><a href="{{ .href }}">{{ .label }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+      <div style="margin-top:2rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+        <a class="btn ghost" href="/disclosure/">목록으로</a>
+        <a class="btn primary" href="/contact/">문의하기</a>
+      </div>
+    </div>
+  </section>
+</main>
+{{ end }}

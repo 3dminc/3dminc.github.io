@@ -1,7 +1,41 @@
 ﻿{{ define "main" }}
 <main>
   {{ partial "section/header.html" . }}
-  {{ partial "section/cards.html" . }}
-  {{ partial "section/cta.html" . }}
+
+  <section class="section">
+    <div class="section-wrap section-body">
+      {{ with .Content }}
+        <div style="margin-bottom:1.2rem; opacity:.92; line-height:1.75;">
+          {{ . }}
+        </div>
+      {{ end }}
+
+      <div style="border:1px solid rgba(127,127,127,.22); border-radius:16px; overflow:hidden;">
+        <div style="display:grid; grid-template-columns: 140px 1fr 180px; gap:0; padding:.8rem 1rem; border-bottom:1px solid rgba(127,127,127,.18); font-weight:700;">
+          <div>Date</div>
+          <div>Title</div>
+          <div>Category</div>
+        </div>
+
+        {{ $p := where .Site.RegularPages "Section" "disclosure" }}
+        {{ $p = where $p "Type" "in" (slice "posts" "disclosure") }}
+        {{ range first 10 (sort $p "Date" "desc") }}
+          <a href="{{ .RelPermalink }}" style="display:grid; grid-template-columns: 140px 1fr 180px; padding:.85rem 1rem; text-decoration:none; border-bottom:1px solid rgba(127,127,127,.12);">
+            <div style="opacity:.8;">{{ .Date.Format "2006-01-02" }}</div>
+            <div style="font-weight:600;">{{ .Title }}</div>
+            <div style="opacity:.8;">
+              {{ with .Params.category }}{{ . }}{{ else }}Notice{{ end }}
+            </div>
+          </a>
+        {{ end }}
+      </div>
+
+      <div style="margin-top:1.2rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+        <a class="btn primary" href="/contact/">IR 문의</a>
+        <a class="btn ghost" href="/company/">Company</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 {{ end }}

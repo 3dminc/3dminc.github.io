@@ -1,0 +1,32 @@
+﻿<section class="home-section">
+  <div class="home-wrap">
+    <div class="home-row">
+      <div>
+        <h2 class="section-title">IR & Disclosure</h2>
+        <p class="section-sub">Latest announcements and IR updates.</p>
+      </div>
+      <div>
+        <a class="btn ghost" href="/disclosure/">더보기 →</a>
+      </div>
+    </div>
+
+    <div class="ir-grid">
+      {{ $p := where .Site.RegularPages "Section" "disclosure" }}
+      {{ $p = where $p "Type" "in" (slice "posts" "disclosure") }}
+      {{ range first 5 (sort $p "Date" "desc") }}
+      <a class="ir-card" href="{{ .RelPermalink }}">
+        <div class="ir-meta">
+          <span class="ir-date">{{ .Date.Format "2006-01-02" }}</span>
+          <span class="ir-cat">{{ with .Params.category }}{{ . }}{{ else }}Notice{{ end }}</span>
+        </div>
+        <div class="ir-title">{{ .Title }}</div>
+        {{ with .Params.summary }}
+          <div class="ir-summary">{{ . }}</div>
+        {{ else }}
+          <div class="ir-summary">{{ .Summary | plainify | truncate 110 }}</div>
+        {{ end }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
