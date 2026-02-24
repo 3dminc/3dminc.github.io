@@ -1,3 +1,8 @@
+﻿baseURL: "https://www.3dminc.com/"
+languageCode: "en-us"
+title: "3DM Inc."
+theme: "PaperMod"
+
 params:
   label:
     icon: "img/3dm-logo.svg"

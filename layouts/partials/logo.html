@@ -1,0 +1,12 @@
+﻿{{- /* Override PaperMod logo partial to force icon rendering */ -}}
+<div class="logo">
+  <a href="{{ "" | absURL }}" accesskey="h" title="{{ .Site.Title }} (Alt + H)">
+    <img src="/img/3dm-logo.svg" alt="3DM Inc." class="site-logo" />
+    <span class="logo-text">{{ .Site.Title }}</span>
+  </a>
+
+  {{- /* Keep PaperMod switches if theme toggle is enabled */ -}}
+  <div class="logo-switches">
+    {{- partial "theme-toggle.html" . -}}
+  </div>
+</div>
