@@ -1,0 +1,15 @@
+﻿<section class="section">
+  <div class="section-wrap">
+    <div class="section-cta">
+      <div>
+        <strong>{{ .Params.cta_title | default "Let’s build Dental Direct Digital Manufacture." }}</strong>
+        {{ with .Params.cta_text }}<p>{{ . }}</p>{{ end }}
+      </div>
+      <div class="section-actions">
+        {{ range .Params.cta_buttons }}
+          <a class="btn {{ .style }}" href="{{ .href }}">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

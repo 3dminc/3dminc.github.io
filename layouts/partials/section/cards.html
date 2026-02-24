@@ -1,0 +1,12 @@
+﻿<section class="section">
+  <div class="section-wrap section-body">
+    <div class="section-grid">
+      {{ range .Params.cards }}
+      <article class="section-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+﻿<link rel="stylesheet" href="{{ (resources.Get "css/section.css" | minify | fingerprint).RelPermalink }}">
+
+<section class="section section-hero">
+  <div class="section-wrap">
+    <p class="section-kicker">{{ .Params.kicker | default "3DM Inc." }}</p>
+    <h1 class="section-title">{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="section-lead">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+</section>

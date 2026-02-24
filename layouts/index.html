@@ -1,0 +1,11 @@
+﻿{{/* layouts/index.html */}}
+{{ define "main" }}
+<link rel="stylesheet" href="{{ (resources.Get "css/home.css" | minify | fingerprint).RelPermalink }}">
+
+<main class="home">
+  {{ partial "home/hero.html" . }}
+  {{ partial "home/capabilities.html" . }}
+  {{ partial "home/workflow.html" . }}
+  {{ partial "home/cta.html" . }}
+</main>
+{{ end }}

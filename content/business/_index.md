@@ -1,37 +1,21 @@
-+++
-date = '2026-02-16T10:41:55+09:00'
-draft = true
-title = 'Business'
-+++
+﻿---
+title: "Business"
+kicker: "Dental Direct Digital Manufacture"
+lead: "3DM의 핵심 사업은 치과 디지털 제조입니다.<br>장비·소프트웨어·소재·공급을 묶어 End-to-End 제조를 제공합니다."
+cards:
+  - title: "Dental 3D Printing"
+    text: "치과용 3D 프린팅 기반 정밀 제조 솔루션(생산성/정밀도/표준화)."
+  - title: "CAD-CAM & Software"
+    text: "설계 워크플로우 최적화, 응용 소프트웨어 개발, 데이터 기반 공정 개선."
+  - title: "Materials Engineering"
+    text: "생체적합 소재 연구개발 및 공정 조건 최적화 지원."
+cta_title: "Let’s discuss your workflow"
+cta_text: "클리닉/기공소/파트너별 운영 환경에 맞춰 제안합니다."
+cta_buttons:
+  - label: "솔루션 문의"
+    href: "/contact/"
+    style: "primary"
+  - label: "시설/역량"
+    href: "/facility/"
+    style: "ghost"
 ---
-title: "3DM Inc."
----
-
-# 3DM Inc.
-
-## Asset-Backed North American Expansion
-
-3DM Inc. is a digital dental and advanced manufacturing company operating across Korea and Canada.
-
-We integrate asset-backed expansion, digital production systems, and cross-border operational structures to establish a scalable North American platform.
-
----
-
-### Strategic Focus
-
-- Digital Dental Manufacturing
-- CAD/CAM & 3D Production Systems
-- Canadian Asset Participation
-- Cross-Border Operational Integration
-
----
-
-### North American Presence
-
-Canada Facility  
-7317 – 12 Street SE  
-Calgary, Alberta  
-
----
-
-For investor and corporate information, please visit the Investment & Disclosure sections.
