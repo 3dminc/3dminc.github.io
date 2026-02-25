@@ -1,14 +1,16 @@
 ﻿{{ define "main" }}
-<main>
+<main class="main">
   {{ partial "section/header.html" . }}
+
   {{ with .Content }}
-  <section class="post-content">
-    {{ . }}
-  </section>
+  <article class="post-single">
+    <div class="post-content">
+      {{ . }}
+    </div>
+  </article>
   {{ end }}
 
   {{ partial "section/cards.html" . }}
   {{ partial "section/cta.html" . }}
 </main>
 {{ end }}
-
