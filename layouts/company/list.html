@@ -1,7 +1,14 @@
 ﻿{{ define "main" }}
 <main>
   {{ partial "section/header.html" . }}
+  {{ with .Content }}
+  <section class="post-content">
+    {{ . }}
+  </section>
+  {{ end }}
+
   {{ partial "section/cards.html" . }}
   {{ partial "section/cta.html" . }}
 </main>
 {{ end }}
+
