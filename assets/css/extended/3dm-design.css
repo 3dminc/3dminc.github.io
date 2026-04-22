@@ -1,0 +1,284 @@
+/* =========================================
+   3DM Inc. — Premium Design System
+   ========================================= */
+
+/* Brand Colors */
+:root {
+  --3dm-blue: #0057B8;
+  --3dm-blue-dark: #003d8c;
+  --3dm-blue-light: #e8f0fb;
+  --3dm-accent: #00A8E8;
+  --3dm-dark: #0d1117;
+  --3dm-gray: #6e7681;
+  --3dm-border: rgba(99,110,123,.25);
+}
+
+/* ── Global ── */
+body {
+  font-family: 'Inter', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ── Header / Nav ── */
+.header {
+  border-bottom: 1px solid var(--3dm-border);
+  backdrop-filter: blur(12px);
+  background: rgba(var(--theme-rgb, 255,255,255), 0.92) !important;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav a {
+  font-weight: 500;
+  font-size: .9rem;
+  letter-spacing: .02em;
+}
+
+.logo img {
+  filter: none;
+}
+
+/* ── Hero Section ── */
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em;
+}
+
+.hero-sub {
+  font-size: 1.1rem !important;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.hero-kicker {
+  color: var(--3dm-blue) !important;
+  font-weight: 600 !important;
+  letter-spacing: .12em !important;
+}
+
+.btn.primary {
+  background: var(--3dm-blue) !important;
+  color: #fff !important;
+  font-weight: 600;
+  padding: .75rem 1.4rem !important;
+  border-radius: 8px !important;
+  transition: background .15s, transform .1s;
+}
+
+.btn.primary:hover {
+  background: var(--3dm-blue-dark) !important;
+  transform: translateY(-1px);
+}
+
+.btn.ghost {
+  border: 1.5px solid var(--3dm-border) !important;
+  border-radius: 8px !important;
+  font-weight: 500;
+  transition: border-color .15s, transform .1s;
+}
+
+.btn.ghost:hover {
+  border-color: var(--3dm-blue) !important;
+  color: var(--3dm-blue) !important;
+  transform: translateY(-1px);
+}
+
+/* ── Cards ── */
+.card {
+  border: 1px solid var(--3dm-border) !important;
+  border-radius: 12px !important;
+  padding: 1.3rem 1.2rem !important;
+  transition: box-shadow .18s, transform .18s, border-color .18s;
+  background: var(--entry);
+}
+
+.card:hover {
+  border-color: var(--3dm-blue) !important;
+  box-shadow: 0 4px 24px rgba(0,87,184,.08);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+  color: var(--3dm-blue);
+}
+
+/* ── Proof items ── */
+.proof-item {
+  border-radius: 12px !important;
+  padding: 1.1rem !important;
+  transition: box-shadow .15s;
+}
+
+.proof-item:hover {
+  box-shadow: 0 2px 16px rgba(0,87,184,.07);
+}
+
+/* ── Steps (workflow) ── */
+.steps li {
+  border-radius: 12px !important;
+  transition: box-shadow .15s, border-color .15s;
+}
+
+.steps li:hover {
+  border-color: var(--3dm-blue) !important;
+  box-shadow: 0 2px 12px rgba(0,87,184,.07);
+}
+
+.step-n {
+  color: var(--3dm-blue) !important;
+  font-size: 1.3rem !important;
+}
+
+/* ── Section titles ── */
+.section-title {
+  font-weight: 800 !important;
+  letter-spacing: -.02em;
+}
+
+.section-sub {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.home-section.muted {
+  background: var(--3dm-blue-light) !important;
+  border-color: rgba(0,87,184,.12) !important;
+}
+
+/* ── CTA Block ── */
+.cta-wrap {
+  border-radius: 16px !important;
+  border-color: var(--3dm-border) !important;
+  padding: 1.6rem 1.8rem !important;
+  background: linear-gradient(135deg, var(--entry) 0%, var(--3dm-blue-light) 100%);
+}
+
+/* ── IR Cards ── */
+.ir-card {
+  border-radius: 12px !important;
+  transition: box-shadow .18s, transform .18s, border-color .18s !important;
+}
+
+.ir-card:hover {
+  border-color: var(--3dm-blue) !important;
+  box-shadow: 0 4px 20px rgba(0,87,184,.08) !important;
+  transform: translateY(-3px) !important;
+}
+
+.ir-cat {
+  color: var(--3dm-blue);
+  border-color: rgba(0,87,184,.25) !important;
+}
+
+/* ── Post Content (markdown pages) ── */
+.post-content h2 {
+  font-weight: 800;
+  letter-spacing: -.025em;
+  border-bottom: 2px solid var(--3dm-blue);
+  padding-bottom: .4rem;
+  margin-top: 2.8rem !important;
+}
+
+.post-content h3 {
+  font-weight: 700;
+  color: var(--3dm-blue);
+  margin-top: 2rem;
+}
+
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0 1.8rem;
+  font-size: .96rem;
+}
+
+.post-content table th {
+  background: var(--3dm-blue);
+  color: #fff;
+  padding: .65rem .9rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.post-content table td {
+  padding: .6rem .9rem;
+  border-bottom: 1px solid var(--3dm-border);
+}
+
+.post-content table tr:nth-child(even) td {
+  background: var(--3dm-blue-light);
+}
+
+.post-content table tr:hover td {
+  background: rgba(0,87,184,.06);
+}
+
+.post-content strong {
+  color: var(--3dm-blue);
+  font-weight: 700;
+}
+
+.post-content hr {
+  border-color: var(--3dm-border) !important;
+  margin: 2rem 0 !important;
+}
+
+.post-content ul li {
+  margin-bottom: .35rem;
+  line-height: 1.7;
+}
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--3dm-border);
+  font-size: .87rem;
+}
+
+/* ── Dark mode adjustments ── */
+.dark .btn.primary {
+  background: var(--3dm-accent) !important;
+}
+
+.dark .home-section.muted {
+  background: rgba(0,87,184,.08) !important;
+}
+
+.dark .cta-wrap {
+  background: linear-gradient(135deg, var(--entry) 0%, rgba(0,87,184,.08) 100%) !important;
+}
+
+.dark .post-content table th {
+  background: var(--3dm-blue-dark);
+}
+
+.dark .post-content table tr:nth-child(even) td {
+  background: rgba(0,87,184,.08);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .post-content table {
+    font-size: .88rem;
+  }
+
+  .post-content table th,
+  .post-content table td {
+    padding: .5rem .6rem;
+  }
+}

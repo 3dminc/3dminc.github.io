@@ -8,19 +8,32 @@ theme = "PaperMod"
   name = "3DM Inc."
 
 [params]
-  description = "3DM Inc. 공식 홈페이지 및 공시/IR 게시"
+  description = "Dental Direct Digital Manufacture — 치과 제조의 디지털 전환을 이끕니다"
   author = "3DM Inc."
   defaultTheme = "auto"
   ShowReadingTime = false
   ShowShareButtons = false
   ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  disableThemeToggle = false
+  comments = false
 
-theme = "PaperMod"
+  [params.label]
+  icon = "/img/3dm-logo.svg"
+  iconHeight = 36
+  text = ""
 
-[params.label]
-icon = "/img/3dm-logo.svg"
-iconHeight = 36
-text = ""
+  [params.homeInfoParams]
+  Title = "3DM Inc."
+  Content = "Dental Direct Digital Manufacture"
+
+  [[params.socialIcons]]
+  name = "email"
+  url = "mailto:admin@3dminc.com"
+
+  [[params.socialIcons]]
+  name = "web"
+  url = "https://www.3dminc.com"
 
 [menu]
   [[menu.main]]
@@ -43,4 +56,11 @@ text = ""
     name = "Contact"
     url = "/contact/"
     weight = 50
-    
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    noClasses = false
