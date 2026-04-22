@@ -1,21 +1,4 @@
-﻿<head>
-
-  {{- /* PaperMod 메인 CSS + 3DM 확장 CSS */}}
-  {{- $theme_vars := resources.Get "css/core/theme-vars.css" | resources.ExecuteAsTemplate "css/theme-vars.css" . }}
-  {{- $reset := resources.Get "css/core/reset.css" }}
-  {{- $common := resources.Get "css/core/svg.css" }}
-  {{- $hljs := resources.Get "css/hljs/pojoaque.min.css" }}
-  {{- $chroma := resources.Get "css/core/zmw5ep-chroma.css" }}
-  {{- $license := resources.Get "css/core/license.css" }}
-  {{- $stylesheet := slice $theme_vars $reset $common | resources.Concat "assets/css/stylesheet.css" | resources.Minify | resources.Fingerprint }}
-  <link rel="preload stylesheet" as="style" href="{{ $stylesheet.RelPermalink }}">
-  {{- range (resources.Match "css/extended/*.css") }}
-  {{- $ext := . | resources.Minify | resources.Fingerprint }}
-  <link rel="preload stylesheet" as="style" href="{{ $ext.RelPermalink }}">
-  {{- end }}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<head>
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
@@ -24,26 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>{{ if .IsHome }}3DM Inc. | Dental Direct Digital Manufacture{{ else }}{{ .Title }} | 3DM Inc.{{ end }}</title>
-
-  <meta name="description" content="{{ if .IsHome }}3DM Inc. is a Dental Direct Digital Manufacture company specializing in dental 3D printing, CAD-CAM systems, and biocompatible materials engineering.{{ else }}{{ with .Params.lead }}{{ . | plainify }}{{ end }}{{ end }}" />
-
-  <meta name="keywords" content="Dental Direct Digital Manufacture, Dental 3D Printing, CAD-CAM, Digital Dentistry, Biocompatible Materials, 3DM Inc." />
-
+  <meta name="description" content="{{ if .IsHome }}3DM Inc.는 치과 디지털 제조(DDDM) 전문 기업입니다.{{ else }}{{ with .Params.lead }}{{ . | plainify }}{{ end }}{{ end }}" />
+  <meta name="keywords" content="Dental 3D Printing, CAD-CAM, Digital Dentistry, 3DM Inc., 치과 3D 프린팅, 치과 디지털 제조" />
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="3DM Inc." />
   <meta property="og:title" content="{{ if .IsHome }}3DM Inc. | Dental Direct Digital Manufacture{{ else }}{{ .Title }} | 3DM Inc.{{ end }}" />
-  <meta property="og:description" content="Digital Dentistry powered by Dental Direct Digital Manufacture." />
   <meta property="og:url" content="{{ .Permalink }}" />
-  <meta property="og:image" content="https://www.3dminc.com/images/og-image.jpg" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="3DM Inc. | Dental Direct Digital Manufacture" />
-  <meta name="twitter:description" content="Integrated workflow for digital dentistry manufacturing." />
-  <meta name="twitter:image" content="https://www.3dminc.com/images/og-image.jpg" />
+
+  <!-- Inter 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -52,18 +31,10 @@
     "@type": "Organization",
     "name": "3DM Inc.",
     "url": "https://www.3dminc.com",
-    "logo": "https://www.3dminc.com/images/logo.png",
     "email": "admin@3dminc.com",
     "foundingDate": "2022",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "22 Nakdongbuk-ro",
-      "addressLocality": "Busan",
-      "addressCountry": "KR"
-    },
-    "description": "Dental Direct Digital Manufacture company specializing in digital dentistry manufacturing."
+    "description": "Dental Direct Digital Manufacture company."
   }
   </script>
 
 </head>
-
