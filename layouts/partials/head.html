@@ -1,4 +1,21 @@
 ﻿<head>
+
+  {{- /* PaperMod 메인 CSS + 3DM 확장 CSS */}}
+  {{- $theme_vars := resources.Get "css/core/theme-vars.css" | resources.ExecuteAsTemplate "css/theme-vars.css" . }}
+  {{- $reset := resources.Get "css/core/reset.css" }}
+  {{- $common := resources.Get "css/core/svg.css" }}
+  {{- $hljs := resources.Get "css/hljs/pojoaque.min.css" }}
+  {{- $chroma := resources.Get "css/core/zmw5ep-chroma.css" }}
+  {{- $license := resources.Get "css/core/license.css" }}
+  {{- $stylesheet := slice $theme_vars $reset $common | resources.Concat "assets/css/stylesheet.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="preload stylesheet" as="style" href="{{ $stylesheet.RelPermalink }}">
+  {{- range (resources.Match "css/extended/*.css") }}
+  {{- $ext := . | resources.Minify | resources.Fingerprint }}
+  <link rel="preload stylesheet" as="style" href="{{ $ext.RelPermalink }}">
+  {{- end }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
