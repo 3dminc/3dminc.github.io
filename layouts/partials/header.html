@@ -6,10 +6,7 @@
     <div class="logo">
       <a href="{{ "" | absLangURL }}" accesskey="h" title="3DM Inc." aria-label="3DM Inc. 홈">
         {{- if site.Params.label.icon }}
-          {{- $img := resources.Get site.Params.label.icon }}
-          {{- if $img }}
-            <img src="{{ $img.Permalink }}" alt="3DM Inc." height="32" class="site-logo" aria-hidden="true">
-          {{- end }}
+          <img src="{{ site.Params.label.icon | absURL }}" alt="3DM Inc." height="32" class="site-logo" aria-hidden="true">
         {{- end }}
       </a>
     </div>

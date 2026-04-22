@@ -37,4 +37,12 @@
   }
   </script>
 
+  {{- /* 3DM Extended CSS */}}
+  {{- $header_css := resources.Get "css/extended/3dm-header.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $header_css.RelPermalink }}">
+  {{- $design_css := resources.Get "css/extended/3dm-design.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $design_css.RelPermalink }}">
+  {{- $company_css := resources.Get "css/extended/company-content.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $company_css.RelPermalink }}">
+
 </head>
