@@ -1,22 +1,15 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" role="img" aria-label="3DM Inc. logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 44" role="img" aria-label="3DM Inc.">
   <defs>
-    <style>
-      .gold{stroke:#C6A84E}
-      .stroke{fill:none;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
-      .wm{font-family:Inter,Pretendard,"Apple SD Gothic Neo","Noto Sans KR",system-ui,-apple-system,sans-serif}
-    </style>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0057FF"/>
+      <stop offset="100%" stop-color="#00C2CB"/>
+    </linearGradient>
   </defs>
-  <g transform="translate(70,40)">
-    <path class="stroke gold" d="M 60 30 L 140 0 L 220 30 L 140 60 Z"/>
-    <path class="stroke gold" d="M 60 30 L 60 130"/>
-    <path class="stroke gold" d="M 220 30 L 220 130"/>
-    <path class="stroke gold" d="M 60 130 L 140 160"/>
-    <path class="stroke gold" d="M 220 130 L 140 160"/>
-    <path class="stroke" style="stroke:currentColor;stroke-width:6;opacity:.9" d="M 140 60 L 140 160"/>
-  </g>
-  <g transform="translate(340,70)">
-    <text class="wm" x="0" y="78" font-size="96" font-weight="800" letter-spacing="-2" fill="currentColor">3DM</text>
-    <text class="wm" x="6" y="118" font-size="24" font-weight="700" letter-spacing="4" fill="#C6A84E" opacity="0.9">INC.</text>
-    <path d="M 6 132 L 150 132" style="stroke:#C6A84E;stroke-width:6;stroke-linecap:round;opacity:.9"/>
-  </g>
+  <!-- Icon: stylized D shape / dental arc -->
+  <rect x="2" y="8" width="4" height="28" rx="2" fill="url(#g1)"/>
+  <path d="M6 8 Q32 8 32 22 Q32 36 6 36" fill="none" stroke="url(#g1)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="22" cy="16" r="2.5" fill="#0057FF" opacity="0.5"/>
+  <!-- Wordmark -->
+  <text x="40" y="30" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5" fill="currentColor">3DM</text>
+  <text x="104" y="30" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#0057FF" opacity="0.85">INC.</text>
 </svg>
