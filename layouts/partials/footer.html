@@ -1,14 +1,50 @@
-﻿<footer class="footer">
-  <div style="max-width:1100px;margin:0 auto;padding:2rem 1rem;line-height:1.6;">
-    <p><strong>3DM Inc.</strong></p>
-    <p>Dental Direct Digital Manufacture</p>
-    <p>
-      22 Nakdongbuk-ro, Gangseo-gu,<br>
-      Busan, Republic of Korea
-    </p>
-    <p>
-      Email: <a href="mailto:admin@3dminc.com">admin@3dminc.com</a>
-    </p>
-    <p>© 2022 3DM Inc. All rights reserved.</p>
+<footer style="background:#040D21;color:rgba(255,255,255,.6);padding:56px 24px 32px;">
+  <div style="max-width:1140px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);">
+      
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          {{ if site.Params.label.icon }}
+            {{ $img := resources.Get site.Params.label.icon }}
+            {{ if $img }}
+              <img src="{{ $img.Permalink }}" alt="3DM Inc." height="32" style="filter:brightness(0) invert(1);">
+            {{ end }}
+          {{ end }}
+        </div>
+        <p style="font-size:.88rem;line-height:1.75;color:rgba(255,255,255,.5);max-width:280px;margin:0 0 20px;">
+          Dental Direct Digital Manufacture.<br>
+          치과 제조의 디지털 전환을 이끕니다.
+        </p>
+        <a href="mailto:admin@3dminc.com" style="font-size:.85rem;color:rgba(255,255,255,.7);text-decoration:none;">
+          ✉ admin@3dminc.com
+        </a>
+      </div>
+
+      <div>
+        <p style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin:0 0 16px;">Company</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="/company/" style="font-size:.88rem;color:rgba(255,255,255,.6);text-decoration:none;">Company</a></li>
+          <li><a href="/business/" style="font-size:.88rem;color:rgba(255,255,255,.6);text-decoration:none;">Business</a></li>
+          <li><a href="/facility/" style="font-size:.88rem;color:rgba(255,255,255,.6);text-decoration:none;">Facility</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin:0 0 16px;">Legal & IR</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="/disclosure/" style="font-size:.88rem;color:rgba(255,255,255,.6);text-decoration:none;">IR & Disclosure</a></li>
+          <li><a href="/contact/" style="font-size:.88rem;color:rgba(255,255,255,.6);text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:24px;">
+      <p style="margin:0;font-size:.82rem;color:rgba(255,255,255,.35);">
+        © 2022 쓰리디엠 주식회사 (3DM Inc.) · 사업자등록번호: 570-88-02086 · 부산광역시 금정구
+      </p>
+      <p style="margin:0;font-size:.82rem;color:rgba(255,255,255,.35);">
+        Dental Direct Digital Manufacture
+      </p>
+    </div>
   </div>
 </footer>
