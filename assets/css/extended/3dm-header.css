@@ -1,66 +1,180 @@
-/* ── 3DM Header Premium ── */
-.header {
-  border-bottom: 1px solid rgba(0,0,0,.08) !important;
-  background: rgba(255,255,255,.95) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
+/* =========================================
+   3DM Inc. — Premium Header
+   ========================================= */
+
+#3dm-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
-.dark .header {
-  background: rgba(4,13,33,.95) !important;
-  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+#3dm-header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
-.nav {
+.dark #3dm-header {
+  background: rgba(4, 13, 33, 0.92) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Nav container */
+#3dm-nav {
   max-width: 1140px !important;
   margin: 0 auto !important;
   padding: 0 24px !important;
+  height: 64px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
 }
 
 /* Logo */
-.logo a {
+#3dm-nav .logo {
+  flex: 0 0 auto;
+  margin-right: auto;
+}
+
+#3dm-nav .logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+#3dm-nav .logo img {
+  height: 30px !important;
+  width: auto;
+  display: block;
+}
+
+/* Menu */
+#3dm-nav #menu {
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
-  text-decoration: none !important;
+  gap: 2px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.logo img {
-  height: 32px !important;
-  width: auto !important;
-}
-
-/* Nav links */
-#menu li a {
-  font-size: .87rem !important;
+#3dm-nav #menu li a {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px !important;
+  font-size: 0.875rem !important;
   font-weight: 500 !important;
-  letter-spacing: .01em !important;
-  color: rgba(0,0,0,.75) !important;
-  padding: 6px 12px !important;
-  border-radius: 6px !important;
-  transition: background .15s, color .15s !important;
+  color: rgba(0, 0, 0, 0.65) !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  letter-spacing: 0.01em;
+  transition: background 0.15s, color 0.15s !important;
+  white-space: nowrap;
 }
 
-#menu li a:hover {
-  background: rgba(0,87,255,.07) !important;
+#3dm-nav #menu li a:hover {
+  background: rgba(0, 87, 255, 0.07) !important;
   color: #0057FF !important;
 }
 
-#menu li a span.active {
+#3dm-nav #menu li a span.active {
   color: #0057FF !important;
   font-weight: 600 !important;
 }
 
-.dark #menu li a {
-  color: rgba(255,255,255,.7) !important;
+.dark #3dm-nav #menu li a {
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
-.dark #menu li a:hover {
-  background: rgba(0,87,255,.15) !important;
-  color: #58a6ff !important;
+.dark #3dm-nav #menu li a:hover {
+  background: rgba(0, 87, 255, 0.12) !important;
+  color: #60a5fa !important;
 }
 
-/* Theme toggle */
+.dark #3dm-nav #menu li a span.active {
+  color: #60a5fa !important;
+}
+
+/* CTA Button */
+.nav-cta {
+  margin-left: 8px !important;
+}
+
+.nav-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 9px 18px !important;
+  background: #0057FF !important;
+  color: #fff !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  letter-spacing: 0.01em;
+  transition: background 0.15s, transform 0.12s, box-shadow 0.15s !important;
+  box-shadow: 0 2px 12px rgba(0, 87, 255, 0.28);
+  white-space: nowrap;
+}
+
+.nav-cta-btn:hover {
+  background: #0041cc !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 20px rgba(0, 87, 255, 0.38) !important;
+  color: #fff !important;
+}
+
+/* Header actions (theme toggle) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
 #theme-toggle {
-  border-radius: 6px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px !important;
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  transition: background 0.15s, border-color 0.15s;
+}
+
+#theme-toggle:hover {
+  background: rgba(0, 87, 255, 0.07) !important;
+  border-color: rgba(0, 87, 255, 0.2) !important;
+}
+
+.dark #theme-toggle {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Scroll effect */
+.header-scrolled {
+  box-shadow: 0 1px 24px rgba(0,0,0,.09) !important;
+}
+
+/* Body font */
+body {
+  font-family: 'Inter', 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, sans-serif !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #3dm-nav #menu li:not(.nav-cta) a span {
+    display: none;
+  }
+  .nav-cta-btn {
+    padding: 8px 12px !important;
+    font-size: 0.8rem !important;
+  }
 }
