@@ -4,41 +4,48 @@ title: "3DM Inc."
 
 # 3DM Inc.
 
-## Digital Manufacturing  
-Korea — Canada  
+## Dental Direct Digital Manufacture
+
+스캔부터 공급까지 — 치과 제조의 전 과정을 하나의 디지털 흐름으로 통합합니다.
 
 ---
 
-3DM Inc. operates a cross-border digital manufacturing structure built upon physical infrastructure and operational integration.
+## 우리가 하는 일
 
-Our strategic participation in North American assets establishes a stable foundation for long-term scalability.
+3DM은 장비를 파는 회사가 아닙니다.  
+**치과 제조 구조를 직접 디지털화하는 기업**입니다.
 
----
-
-## Structure
-
-3DM Inc. integrates:
-
-- Commercial real estate participation in Canada  
-- On-site dental laboratory operations  
-- Digital CAD/CAM production systems  
-- Dual-geographic operational control  
-
-This structure balances capital stability with operational flexibility.
+| 단계 | 설명 |
+|------|------|
+| **01 Scan** | 환자 데이터의 정확한 입력 및 디지털 변환 |
+| **02 Design** | CAD 기반 치과 보철물 설계 및 검증 |
+| **03 Print** | 치과용 3D 프린팅 정밀 제조 |
+| **04 Deliver** | 제작물 공급 및 운영 지원 |
 
 ---
 
-## Presence
+## 핵심 역량
 
-Calgary, Alberta  
-7317 – 12 Street SE  
-Canada  
+- **치과용 3D 프린팅 솔루션** — 정밀도·반복성·확장성을 갖춘 제조 시스템
+- **CAD-CAM 시스템** — 디지털 설계 워크플로우 최적화
+- **생체적합 소재** — 치과 인증 소재 연구개발 및 공정 적용
+- **해외 네트워크** — 한국-캐나다 크로스보더 운영 체계
 
 ---
 
-For corporate information, please visit:
+## 글로벌 거점
 
-- [Company](/company/)
-- [Investment](/investment-highlights/)
-- [Disclosure](/disclosure/)
-- [Contact](/contact/)
+**한국 본사**  
+부산광역시 금정구 금정로237번길 14, 301호
+
+**캐나다 거점**  
+7317 – 12 Street SE, Calgary, Alberta
+
+---
+
+## 함께 시작하세요
+
+- [회사 소개](/company/)
+- [사업 영역](/business/)
+- [IR & 공시](/disclosure/)
+- [문의하기](/contact/)
